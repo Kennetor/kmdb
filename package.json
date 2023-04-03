@@ -1,6 +1,6 @@
 {
-  "name": "kmdb",
   "homepage": "https://github.com/Kennetor/kmdb",
+  "name": "kmdb",
   "private": true,
   "version": "0.0.0",
   "type": "module",
