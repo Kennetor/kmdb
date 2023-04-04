@@ -28,7 +28,11 @@ export const Tvcomp = () => {
       {filteredData.map((tv) => (
         <div key={tv.id}>
           {tv.poster_path && (
-            <img src={`${img}w500${tv.poster_path}`} alt={tv.name} />
+            <img
+              src={`${img}w500${tv.poster_path}`}
+              alt={tv.name}
+              className="mt-12"
+            />
           )}
 
           <h1 className="p-2 text-center tex">{tv.name}</h1>

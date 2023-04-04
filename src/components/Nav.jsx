@@ -1,93 +1,36 @@
+// Icons
 import { MdHome, MdFace } from "react-icons/md";
 import { RiMovieLine, RiSlideshow4Line } from "react-icons/ri";
 import { FaSignOutAlt, FaRegMoon } from "react-icons/fa";
 import { BsFillCaretRightFill } from "react-icons/bs";
-// import { BiCog } from "react-icons/bi";
-
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { ImSearch } from "react-icons/im";
+// Components
+import { BurgerMenu } from "./Buttons";
+import { ListItem } from "./ListItem";
 
 export const Nav = () => {
-  const [active, setActive] = useState(false);
-
-  const toggleNavigation = () => {
-    setActive(!active);
-  };
-
-  const handleClick = () => {
-    setActive(false);
-  };
-
   return (
-    <div className={`navigation ${active ? "active" : ""} z-50`}>
-      <ul className="flex flex-col justify-between h-full gap-10 mt-8 xl:gap-20">
-        <li>
-          <Link to="/home" onClick={handleClick}>
-            <div className="icon">
-              <MdHome className="m-auto text-5xl" />
-            </div>
-            <span className="title">Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/movie">
-            <span className="icon">
-              <RiMovieLine className="m-auto text-5xl" />
-            </span>
-            <span className="title">Movies</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/tv">
-            <span className="icon">
-              <BsFillCaretRightFill className="m-auto text-5xl" />
-            </span>
-            <span className="title">Tv shows</span>
-          </Link>
-        </li>
-        <div className="mt-auto space flex-grow-1"></div>
-        <li>
-          <a href="#">
-            <span className="icon">
-              <RiSlideshow4Line className="m-auto text-5xl" />
-            </span>
-            <span className="title">Top 20</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span className="icon">
-              <RiMovieLine className="m-auto text-5xl" />
-            </span>
-            <span className="title">Upcoming</span>
-          </a>
-        </li>
-        <div className="mt-auto space flex-grow-1"></div>
-        <li>
-          <a href="#">
-            <span className="icon">
-              <MdFace className="m-auto text-5xl" />
-            </span>
-            <span className="title">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span className="icon">
-              <FaRegMoon className="m-auto text-5xl" />
-            </span>
-            <span className="title">Dark Mode</span>
-          </a>
-        </li>
-        <li className="mb-20">
-          <a href="#">
-            <span className="icon">
-              <FaSignOutAlt className="m-auto text-5xl" />
-            </span>
-            <span className="title">SignOut</span>
-          </a>
-        </li>
-      </ul>
+    <div>
+      <BurgerMenu />
+      <div className="z-50 xl:bg-[#ff7700] hover:bg-[#ff7700] overflow-hidden h-full w-16 fixed transition-width duration-500  xl:hover:w-[230px] hover:w-48">
+        <ul className="flex flex-col justify-between h-full gap-10 mt-20 xl:mt-8 xl:gap-20 absolute top-0 left-0 w-full">
+          <ListItem to="/home" text="Home" icon={MdHome} />
+          <ListItem to="/movie" text="Movie" icon={RiMovieLine} />
+          <ListItem to="/tv" text="Tv Show" icon={BsFillCaretRightFill} />
+
+          <div className="mt-auto space flex-grow-1"></div>
+          <ListItem to="/search" text="Search" icon={ImSearch} />
+          <ListItem to="/top" text="Top 20" icon={RiSlideshow4Line} />
+          <ListItem to="/upcoming" text="Upcoming" icon={RiSlideshow4Line} />
+
+          <div className="mt-auto space flex-grow-1"></div>
+          <ListItem to="/profile" text="Profile" icon={MdFace} />
+          <ListItem to="/darkmode" text="Theme" icon={FaRegMoon} />
+          <div className="mb-32">
+            <ListItem to="/signout" text="Sign Out" icon={FaSignOutAlt} />
+          </div>
+        </ul>
+      </div>
     </div>
   );
 };
