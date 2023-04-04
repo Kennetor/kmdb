@@ -24,11 +24,15 @@ export const Moviecomp = () => {
     : [];
 
   return (
-    <div className="grid grid-cols-4 gap-6 p-4 text-white">
+    <div className="grid grid-cols-2 gap-6 p-4 overflow-hidden text-white xl:grid-cols-4">
       {filteredData.map((movie) => (
         <div key={movie.id}>
           {movie.poster_path && (
-            <img src={`${img}w500${movie.poster_path}`} alt={movie.name} />
+            <img
+              src={`${img}w500${movie.poster_path}`}
+              alt={movie.name}
+              className="sm:w-185"
+            />
           )}
 
           <h1 className="p-2 text-center tex">{movie.name}</h1>

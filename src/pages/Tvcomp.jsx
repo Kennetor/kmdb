@@ -24,7 +24,7 @@ export const Tvcomp = () => {
     : [];
 
   return (
-    <div className="grid grid-cols-4 gap-6 p-4 text-white">
+    <div className="grid grid-cols-2 gap-6 p-4 overflow-hidden text-white xl:grid-cols-4">
       {filteredData.map((tv) => (
         <div key={tv.id}>
           {tv.poster_path && (
