@@ -6,16 +6,14 @@ import { Moviecomp } from "./pages/Moviecomp";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/tv" element={<Tvcomp />} />
-          <Route path="/movie" element={<Moviecomp />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/tv" element={<Tvcomp />} />
+        <Route path="/movie" element={<Moviecomp />} />
+      </Routes>
+    </Router>
   );
 }
 
