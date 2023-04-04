@@ -4,37 +4,38 @@ import { FaSignOutAlt, FaRegMoon } from "react-icons/fa";
 // import { BiCog } from "react-icons/bi";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Nav = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className={`navigation ${active ? "active" : ""}`}>
+    <div className={`navigation ${active ? "active" : ""} z-50`}>
       <ul className="flex flex-col justify-between h-full gap-10 mt-8 xl:gap-20">
         <li>
-          <a href="#">
-            <span className="icon">
+          <Link to="/home">
+            <div className="icon">
               <MdHome className="m-auto text-5xl" />
-            </span>
+            </div>
             <span className="title">Home</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/movie">
             <span className="icon">
               <RiMovieLine className="m-auto text-5xl" />
             </span>
             <span className="title">Movies</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/tv">
             <span className="icon">
               <RiMovieLine className="m-auto text-5xl" />
             </span>
             <span className="title">Tv shows</span>
-          </a>
-        </li>{" "}
+          </Link>
+        </li>
         <div className="mt-auto space flex-grow-1"></div>
         <li>
           <a href="#">
