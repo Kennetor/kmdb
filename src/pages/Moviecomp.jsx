@@ -5,10 +5,10 @@ const {
   VITE_DB_API_IMAGE: img,
 } = import.meta.env;
 
+const API_ENDPOINT = `${url}movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+
 export const Moviecomp = () => {
   const [data, setData] = useState(null);
-
-  const API_ENDPOINT = `${url}movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
   useEffect(() => {
     async function getData() {
@@ -31,7 +31,7 @@ export const Moviecomp = () => {
             <img
               src={`${img}w500${movie.poster_path}`}
               alt={movie.name}
-              className="sm:w-185"
+              className="mt-12"
             />
           )}
 
