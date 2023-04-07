@@ -16,19 +16,20 @@ export const Nav = () => {
   };
 
   const handleMouseEnter = () => {
-    setIsExpanded(true);
+    setIsExpanded((prevState) => !prevState);
   };
+
   return (
     <div>
       <div
         className={
           isExpanded
             ? "z-50 xl:bg-[#ff7700] hover:bg-[#ff7700] overflow-hidden h-14 xl:h-full hover:h-full w-16 fixed transition-width duration-500 xl:hover:w-[200px] hover:w-48"
-            : "overflow-hidden w-16 hover:bg-[#ff7700] xl:bg-[#ff7700] fixed h-14 hover:h-full xl:h-full hover:w-16 z-50"
+            : "overflow-hidden w-16 hover:bg-[#ff7700] xl:bg-[#ff7700] fixed h-14 hover:h-full xl:h-full xl:hover:w-16 z-50"
         }
         onMouseEnter={handleMouseEnter}
       >
-        <BurgerMenu onClick={handleClick} />
+        <BurgerMenu />
         <ul className="flex flex-col justify-between h-full gap-10 mt-20 xl:mt-8 xl:gap-20 absolute top-0 left-0 w-full">
           <ListItem
             to="/home"
