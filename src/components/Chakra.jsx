@@ -26,8 +26,8 @@ function PlacementExample() {
 
   return (
     <div className="xl:hidden">
-      <Button colorScheme="blue" onClick={handleButtonClick}>
-        <BurgerMenu />
+      <Button>
+        <BurgerMenu colorScheme="blue" onClick={handleButtonClick} />
       </Button>
       <Drawer
         placement="left"
