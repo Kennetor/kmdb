@@ -115,7 +115,7 @@ export const SearchInput = () => {
         </button>
       </div>
       {movies.length > 0 && (
-        <table {...getTableProps()}>
+        <table {...getTableProps()} className="m-auto">
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
