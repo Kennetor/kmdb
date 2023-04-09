@@ -21,7 +21,7 @@ export const Nav = () => {
         <ListItem to="/tv" text="Tv Show" icon={BsFillCaretRightFill} />
         <div className="mt-auto flex-grow-1"></div>
         <ListItem to="/search" text="Search" icon={ImSearch} />
-        <ListItem to="/top" text="Top 20" icon={RiSlideshow4Line} />
+
         <ListItem to="/upcoming" text="Upcoming" icon={RiSlideshow4Line} />
         <div className="mt-auto flex-grow-1"></div>
         <ListItem to="/profile" text="Profile" icon={MdFace} />

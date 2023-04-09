@@ -3,6 +3,8 @@ import { Nav } from "./components/Nav";
 import { Home } from "./pages/Home";
 import { Tvcomp } from "./pages/Tvcomp";
 import { Moviecomp } from "./pages/Moviecomp";
+import { ComingSoon } from "./pages/ComingSoon";
+import SearchInput from "./components/SearchInput";
 
 function App() {
   return (
@@ -12,9 +14,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/movie" element={<Moviecomp />} />
         <Route path="/tv" element={<Tvcomp />} />
-        <Route path="/search" element={<Tvcomp />} />
-        <Route path="/top" element={<Tvcomp />} />
-        <Route path="/upcoming" element={<Tvcomp />} />
+        <Route path="/search" element={<SearchInput />} />
+
+        <Route path="/upcoming" element={<ComingSoon />} />
         <Route path="/profile" element={<Tvcomp />} />
         <Route path="/darkmode" element={<Tvcomp />} />
         <Route path="/signout" element={<Tvcomp />} />
