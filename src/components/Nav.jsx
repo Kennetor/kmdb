@@ -12,7 +12,6 @@ export const Nav = () => {
     <div
       className={
         "z-50 xl:bg-[#ff7700] hover:bg-[#ff7700] overflow-hidden h-14 xl:h-full hover:h-full w-16 fixed transition-width duration-500 xl:hover:w-[200px] hover:w-48"
-        // "overflow-hidden w-16 hover:bg-[#ff7700] xl:bg-[#ff7700] fixed h-14 hover:h-full xl:h-full xl:hover:w-16 z-50"
       }
     >
       <BurgerMenu />
