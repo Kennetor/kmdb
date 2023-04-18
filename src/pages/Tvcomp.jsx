@@ -5,10 +5,10 @@ const {
   VITE_DB_API_IMAGE: img,
 } = import.meta.env;
 
+const API_ENDPOINT = `${url}tv/popular?api_key=${apiKey}&language=en-US&page=1`;
+
 export const Tvcomp = () => {
   const [data, setData] = useState(null);
-
-  const API_ENDPOINT = `${url}tv/popular?api_key=${apiKey}&language=en-US&page=1`;
 
   useEffect(() => {
     async function getData() {
