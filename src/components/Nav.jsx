@@ -15,7 +15,7 @@ export const Nav = () => {
       }
     >
       <BurgerMenu />
-      <ul className="flex flex-col justify-between h-full gap-10 mt-20 xl:mt-8 xl:gap-20 absolute top-0 left-0 w-full">
+      <ul className="absolute top-0 left-0 flex flex-col justify-between w-full h-full gap-10 mt-20 xl:mt-8 xl:gap-20">
         <ListItem to="/home" text="Home" icon={MdHome} />
         <ListItem to="/movie" text="Movie" icon={RiMovieLine} />
         <ListItem to="/tv" text="Tv Show" icon={BsFillCaretRightFill} />
@@ -23,6 +23,7 @@ export const Nav = () => {
         <ListItem to="/search" text="Search" icon={ImSearch} />
 
         <ListItem to="/upcoming" text="Upcoming" icon={RiSlideshow4Line} />
+        <ListItem to="/top20" text="Top20" icon={RiSlideshow4Line} />
         <div className="mt-auto flex-grow-1"></div>
         <ListItem to="/profile" text="Profile" icon={MdFace} />
         <ListItem to="/darkmode" text="Theme" icon={FaRegMoon} />
