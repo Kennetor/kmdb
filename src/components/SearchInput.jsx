@@ -99,17 +99,17 @@ export const SearchInput = () => {
   //   console.log(movies);
   return (
     <div className="text-center ">
-      <div className="px-4 xl:px-20 py-20 grid xl:ml-10 ">
+      <div className="grid px-4 py-20 xl:px-20 xl:ml-10 ">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="p-4 xl:p-6 text-xl text-center"
+          className="p-4 text-xl text-center xl:p-6"
           onKeyDown={handleKeyDown}
         />
         <button
           onClick={handleSearch}
-          className="text-4xl rounded-lg bg-gray-500 w-40 text-center m-auto mt-10 hover:bg-green-600 text-white"
+          className="w-40 m-auto mt-10 text-4xl text-center text-white bg-gray-500 rounded-lg hover:bg-green-600"
         >
           Search
         </button>

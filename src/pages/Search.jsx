@@ -10,17 +10,18 @@ const columns = [
   },
   {
     Header: "Genre",
-    accessor: () => {
+    accessor: (movie) => {
       // const genreIds = movie.genre_ids || [];
       // const genreNames = genreIds.map((id) => genres[id]);
-      return genreNames.map((name) => (
-        <span>
+      return genreNames.map((name, index) => (
+        <span key={`${movie.id}-${index}`}>
           {name}
           <br />
         </span>
       ));
     },
   },
+
   {
     Header: "Rating",
     accessor: "vote_average",
@@ -33,28 +34,6 @@ const columns = [
     ),
   },
 ];
-
-// const genres = {
-//   28: "Action",
-//   12: "Adventure",
-//   16: "Animation",
-//   35: "Comedy",
-//   80: "Crime",
-//   99: "Documentary",
-//   18: "Drama",
-//   10751: "Family",
-//   14: "Fantasy",
-//   36: "History",
-//   27: "Horror",
-//   10402: "Music",
-//   9648: "Mystery",
-//   10749: "Romance",
-//   878: "Science Fiction",
-//   10770: "TV Movie",
-//   53: "Thriller",
-//   10752: "War",
-//   37: "Western",
-// };
 
 export const SearchInput = () => {
   const [query, setQuery] = useState("");
@@ -90,20 +69,20 @@ export const SearchInput = () => {
       },
       useSortBy
     );
-  //   console.log(movies);
+  console.log(movies);
   return (
     <div className="text-center">
-      <div className="px-20 py-20 grid">
+      <div className="grid px-20 py-20">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="p-10 text-xl text-center"
+          className="p-20 text-xl text-center "
           onKeyDown={handleKeyDown}
         />
         <button
           onClick={handleSearch}
-          className="text-4xl rounded-lg bg-gray-500 w-40 flext text-center m-auto mt-10 hover:bg-green-600 text-white"
+          className="w-40 m-auto mt-10 text-4xl text-center text-white bg-gray-500 rounded-lg flext hover:bg-green-600"
         >
           Search
         </button>
